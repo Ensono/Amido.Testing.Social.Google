@@ -11,18 +11,18 @@ namespace Amido.Testing.Social.Google.PageObjects
     {
         private static Func<IWebDriver> webDriver;
 
-        public static void Init(Func<IWebDriver> getWebDriver)
+        public static void Init(Func<IWebDriver> webDriverFunc)
+        {
+            webDriver = webDriverFunc;
+        }
+
+        public GoogleAllowAppPageObject()
         {
             if (webDriver == null)
             {
                 throw new Exception("You must call GoogleAllowAppPageObject.Init once before using this class");
             }
 
-            webDriver = getWebDriver;
-        }
-
-        public GoogleAllowAppPageObject()
-        {
             PageFactory.InitElements(webDriver(), this);
         }
 
