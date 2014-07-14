@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bootstrap.cs" />
     <Compile Include="Configuration\GoogleUserConfigurationElement.cs" />
     <Compile Include="PageObjects\GoogleAllowAppPageObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
